@@ -1,0 +1,364 @@
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~
+$ cd IH-Labs
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs
+$ cd lab-bash
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash (master)
+$ dir
+exercices  inputs  lorem  lorem-copy  outputs  readme.md
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash (master)
+$ echo 'Hello World'
+Hello World
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash (master)
+$ mkdir new_dir
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash (master)
+$ dir
+exercices  inputs  lorem  lorem-copy  new_dir  outputs  readme.md
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash (master)
+$ git add .
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash (master)
+$ rm new_dir
+rm: cannot remove 'new_dir': Is a directory
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash (master)
+$ rm -r new_dir
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash (master)
+$ dir
+exercices  inputs  lorem  lorem-copy  outputs  readme.md
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash (master)
+$ cp lorem/sed.txt lorem-copy
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash (master)
+$ dir
+exercices  inputs  lorem  lorem-copy  outputs  readme.md
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash (master)
+$ cd lorem-copy
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+$ dir
+dummy_file.txt  sed.txt
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+$ cp lorem/at.txt lorem-copy; cp lorem/lorem.txt lorem-copy
+cp: cannot stat 'lorem/at.txt': No such file or directory
+cp: cannot stat 'lorem/lorem.txt': No such file or directory
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+$ cd..
+bash: cd..: command not found
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+$ cd ..
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash (master)
+$ ^C
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash (master)
+$ cp lorem/at.txt lorem-copy; cp lorem/lorem.txt lorem-copy
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash (master)
+$ cd lorem
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash/lorem (master)
+$ cd ..
+c
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash (master)
+$ cat lorem sed.txt
+cat: lorem: Is a directory
+cat: sed.txt: No such file or directory
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash (master)
+$ cat lorem/sed.txt
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash (master)
+$ cp lorem/at.txt; lorem/lorem.txt
+cp: missing destination file operand after 'lorem/at.txt'
+Try 'cp --help' for more information.
+lorem/lorem.txt: line 1: Lorem: command not found
+lorem/lorem.txt: line 2: Ut: command not found
+lorem/lorem.txt: line 3: Duis: command not found
+lorem/lorem.txt: line 4: Excepteur: command not found
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash (master)
+$ cat lorem/at.txt; lorem/lorem.txt
+At vero eos ET accusamus ET iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+deleniti atque corrupti quos dolores ET quas molestias excepturi sint occaecati cupiditate non
+provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum ET dolorum fuga.
+Et harum quidem rerum facilis est ET expedita distinctio.
+Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod
+maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+Temporibus autem quibusdam ET aut officiis debitis aut rerum necessitatibus saepe eveniET
+ut ET voluptates repudiandae sint ET molestiae non recusandae.
+Itaque earum rerum hic tenETur a sapiente delectus, ut aut reiciendis voluptatibus maiores
+alias consequatur aut perferendis doloribus asperiores repellat
+lorem/lorem.txt: line 1: Lorem: command not found
+lorem/lorem.txt: line 2: Ut: command not found
+lorem/lorem.txt: line 3: Duis: command not found
+lorem/lorem.txt: line 4: Excepteur: command not found
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash (master)
+$ cat lorem/at.txt; cat lorem/lorem.txt
+At vero eos ET accusamus ET iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+deleniti atque corrupti quos dolores ET quas molestias excepturi sint occaecati cupiditate non
+provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum ET dolorum fuga.
+Et harum quidem rerum facilis est ET expedita distinctio.
+Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod
+maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+Temporibus autem quibusdam ET aut officiis debitis aut rerum necessitatibus saepe eveniET
+ut ET voluptates repudiandae sint ET molestiae non recusandae.
+Itaque earum rerum hic tenETur a sapiente delectus, ut aut reiciendis voluptatibus maiores
+alias consequatur aut perferendis doloribus asperiores repellat
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash (master)
+$ head -3 lorem1-copy/sed.txt
+head: cannot open 'lorem1-copy/sed.txt' for reading: No such file or directory
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash (master)
+$ head -3 lorem-copy/sed.txt
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash (master)
+$ head -1 lorem-copy/sed.txt
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash (master)
+$ head +3 lorem-copy/sed.txt
+head: cannot open '+3' for reading: No such file or directory
+==> lorem-copy/sed.txt <==
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash (master)
+$ tail -3 lorem-copy/sed.txt
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash (master)
+$ cd lorem-copy
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+$ dir
+at.txt  dummy_file.txt  lorem.txt  sed.txt
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+$ echo 'Homo homini lupus' >> lorem-copy/sed.txt
+bash: lorem-copy/sed.txt: No such file or directory
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+$ echo 'Homo homini lupus'>> lorem-copy/sed.txt
+bash: lorem-copy/sed.txt: No such file or directory
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash/lorem-copy (master)
+$ cd ..
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash (master)
+$ echo 'Homo homini lupus' >> lorem-copy/sed.txt
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash (master)
+$ tail -3 lorem-copy/sed.txt
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus
+Homo homini lupus
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash (master)
+$ cp --help
+Usage: cp [OPTION]... [-T] SOURCE DEST
+  or:  cp [OPTION]... SOURCE... DIRECTORY
+  or:  cp [OPTION]... -t DIRECTORY SOURCE...
+Copy SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY.
+
+Mandatory arguments to long options are mandatory for short options too.
+  -a, --archive                same as -dR --preserve=all
+      --attributes-only        don't copy the file data, just the attributes
+      --backup[=CONTROL]       make a backup of each existing destination file
+  -b                           like --backup but does not accept an argument
+      --copy-contents          copy contents of special files when recursive
+  -d                           same as --no-dereference --preserve=links
+  -f, --force                  if an existing destination file cannot be
+                                 opened, remove it and try again (this option
+                                 is ignored when the -n option is also used)
+  -i, --interactive            prompt before overwrite (overrides a previous -n
+                                  option)
+  -H                           follow command-line symbolic links in SOURCE
+  -l, --link                   hard link files instead of copying
+  -L, --dereference            always follow symbolic links in SOURCE
+  -n, --no-clobber             do not overwrite an existing file (overrides
+                                 a previous -i option)
+  -P, --no-dereference         never follow symbolic links in SOURCE
+  -p                           same as --preserve=mode,ownership,timestamps
+      --preserve[=ATTR_LIST]   preserve the specified attributes (default:
+                                 mode,ownership,timestamps), if possible
+                                 additional attributes: context, links, xattr,
+                                 all
+      --no-preserve=ATTR_LIST  don't preserve the specified attributes
+      --parents                use full source file name under DIRECTORY
+  -R, -r, --recursive          copy directories recursively
+      --reflink[=WHEN]         control clone/CoW copies. See below
+      --remove-destination     remove each existing destination file before
+                                 attempting to open it (contrast with --force)
+      --sparse=WHEN            control creation of sparse files. See below
+      --strip-trailing-slashes  remove any trailing slashes from each SOURCE
+                                 argument
+  -s, --symbolic-link          make symbolic links instead of copying
+  -S, --suffix=SUFFIX          override the usual backup suffix
+  -t, --target-directory=DIRECTORY  copy all SOURCE arguments into DIRECTORY
+  -T, --no-target-directory    treat DEST as a normal file
+  -u, --update                 copy only when the SOURCE file is newer
+                                 than the destination file or when the
+                                 destination file is missing
+  -v, --verbose                explain what is being done
+  -x, --one-file-system        stay on this file system
+  -Z                           set SELinux security context of destination
+                                 file to default type
+      --context[=CTX]          like -Z, or if CTX is specified then set the
+                                 SELinux or SMACK security context to CTX
+      --help     display this help and exit
+      --version  output version information and exit
+
+By default, sparse SOURCE files are detected by a crude heuristic and the
+corresponding DEST file is made sparse as well.  That is the behavior
+selected by --sparse=auto.  Specify --sparse=always to create a sparse DEST
+file whenever the SOURCE file contains a long enough sequence of zero bytes.
+Use --sparse=never to inhibit creation of sparse files.
+
+When --reflink[=always] is specified, perform a lightweight copy, where the
+data blocks are copied only when modified.  If this is not possible the copy
+fails, or if --reflink=auto is specified, fall back to a standard copy.
+Use --reflink=never to ensure a standard copy is performed.
+
+The backup suffix is '~', unless set with --suffix or SIMPLE_BACKUP_SUFFIX.
+The version control method may be selected via the --backup option or through
+the VERSION_CONTROL environment variable.  Here are the values:
+
+  none, off       never make backups (even if --backup is given)
+  numbered, t     make numbered backups
+  existing, nil   numbered if numbered backups exist, simple otherwise
+  simple, never   always make simple backups
+
+As a special case, cp makes a backup of SOURCE when the force and backup
+options are given and SOURCE and DEST are the same name for an existing,
+regular file.
+
+GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
+Report any translation bugs to <https://translationproject.org/team/>
+Full documentation <https://www.gnu.org/software/coreutils/cp>
+or available locally via: info '(coreutils) cp invocation'
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash (master)
+$ sed -i's/et/ET/g' lorem/at.txt
+sed: -e expression #1, char 2: extra characters after command
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash (master)
+$ sed -i 's/et/ET/g' lorem/at.txt
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash (master)
+$ cat at.txt
+cat: at.txt: No such file or directory
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash (master)
+$ cat lorem/at.txt
+At vero eos ET accusamus ET iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+deleniti atque corrupti quos dolores ET quas molestias excepturi sint occaecati cupiditate non
+provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum ET dolorum fuga.
+Et harum quidem rerum facilis est ET expedita distinctio.
+Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod
+maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+Temporibus autem quibusdam ET aut officiis debitis aut rerum necessitatibus saepe eveniET
+ut ET voluptates repudiandae sint ET molestiae non recusandae.
+Itaque earum rerum hic tenETur a sapiente delectus, ut aut reiciendis voluptatibus maiores
+alias consequatur aut perferendis doloribus asperiores repellat
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash (master)
+$ git config
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-pattern]
+    --get-all             get all values: key [value-pattern]
+    --get-regexp          get values for regexp: name-regex [value-pattern]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value-pattern]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-pattern]
+    --unset-all           remove all matches: name [value-pattern]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    --fixed-value         use string equality when comparing values to 'value-pattern'
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <type>     value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry
+
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash (master)
+$ pwd
+/c/Users/gau82/IH-Labs/lab-bash
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash (master)
+$ ^C
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash (master)
+$
