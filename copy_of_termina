@@ -357,8 +357,36 @@ gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash (master)
 $ pwd
 /c/Users/gau82/IH-Labs/lab-bash
 
-gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash (master)
-$ ^C
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-labs/lab-bash (master)
+$ cat lorem/sed.txt | wc-l
+bash: wc-l: command not found
 
-gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-Labs/lab-bash (master)
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-labs/lab-bash (master)
+$ cat lorem/sed.txt | wc -l
+9
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-labs/lab-bash (master)
+$ find-name 'lorem*.*'| wc -l
+bash: find-name: command not found
+0
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-labs/lab-bash (master)
+$ find -name 'lorem*.*'| wc -l
+2
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-labs/lab-bash (master)
+$ var1='Gaurav'
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-labs/lab-bash (master)
+$ echo $var1
+Gaurav
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-labs/lab-bash (master)
+$ mkdir $var1
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-labs/lab-bash (master)
+$ rmdir $var1
+
+gau82@LAPTOP-MC5VSJD3 MINGW64 ~/IH-labs/lab-bash (master)
 $
+
